@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Values.configMap.name }}
+data:
+  kong-config.json: |
+    {{- .Files.Get "config/kong-config.json" | nindent 4 }}

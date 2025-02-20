@@ -1,0 +1,117 @@
+{
+    "services": [
+      {
+        "name": "foo-service",
+        "host": "foo-service.abhi",
+        "port": 8080,
+        "protocol": "http",
+        "retries": 5,
+        "connect_timeout": 60000,
+        "write_timeout": 60000,
+        "read_timeout": 60000,
+        "enabled": true,
+        "routes": [
+          {
+              "name": "foo-route",
+              "paths": ["/api/v1/orders"],
+              "path_handling": "v1",
+              "preserve_host": true,
+              "methods": ["GET", "POST", "PUT", "PATCH", "DELETE","OPTIONS"],
+              "protocols": ["http"],
+              "https_redirect_status_code": 426,
+              "plugins": [
+                  {
+                      "name": "request-termination",
+                      "config": {
+                          "status_code": 405,
+                          "body": "Method not allowed",
+                          "content_type": "application/json"
+                      },
+                      "enabled": true,
+                      "protocols": ["http", "https", "grpc", "grpcs"]
+                  }
+              ]
+          },
+          {
+              "name": "foo-route-2",
+              "paths": ["/api/v1/orders2"],
+              "path_handling": "v1",
+              "preserve_host": true,
+              "methods": ["GET", "POST", "PUT","OPTIONS"],
+              "protocols": ["http"],
+              "https_redirect_status_code": 426,
+              "plugins": [
+                  {
+                      "name": "request-termination",
+                      "config": {
+                          "status_code": 405,
+                          "body": "Method not allowed",
+                          "content_type": "application/json"
+                      },
+                      "enabled": false,
+                      "protocols": ["http", "https", "grpc", "grpcs"]
+                  }
+              ]
+          }
+      ]
+      },
+      {
+          "name": "bar-service",
+          "host": "bar-service.abhi2",
+          "port": 8080,
+          "protocol": "http",
+          "retries": 5,
+          "connect_timeout": 60000,
+          "write_timeout": 60000,
+          "read_timeout": 60000,
+          "enabled": true,
+          "routes": [
+            {
+                "name": "bar-route",
+                "paths": ["/api/v1/bar1"],
+                "path_handling": "v1",
+                "preserve_host": true,
+                "methods": ["GET", "POST", "PUT", "PATCH", "DELETE","OPTIONS"],
+                "protocols": ["http"],
+                "https_redirect_status_code": 426,
+                "enabled": true,
+                "plugins": [
+                    {
+                        "name": "request-termination",
+                        "config": {
+                            "status_code": 405,
+                            "body": "Method not allowed",
+                            "content_type": "application/json"
+                        },
+                        "enabled": true,
+                        "protocols": ["http", "https", "grpc", "grpcs"]
+                    }
+                ]
+            },
+            {
+              "name": "bar-route-2",
+              "paths": ["/api/v1/bar2"],
+              "path_handling": "v1",
+              "preserve_host": true,
+              "methods": ["GET", "POST", "PUT", "PATCH", "DELETE","OPTIONS"],
+              "protocols": ["http"],
+              "https_redirect_status_code": 426,
+              "enabled": true,
+              "plugins": []
+          }
+          ]
+      },
+      {
+          "name": "war-service",
+          "host": "war-service.test123",
+          "port": 8080,
+          "protocol": "http",
+          "retries": 5,
+          "connect_timeout": 60000,
+          "write_timeout": 60000,
+          "read_timeout": 60000,
+          "enabled": true,
+          "routes": []
+      }
+    ]
+  } 
