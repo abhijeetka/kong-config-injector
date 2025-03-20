@@ -38,6 +38,5 @@ nav:
     - Configuration: usage/configuration.md
     - Examples: usage/examples.md
   - Reference:
-    - Kong Service JSON: reference/kong-service-json.md
+    - Kong Service JSON: reference/kong-service.md
     - Helm Chart: reference/helm-chart.md
-    - API Reference: reference/api-reference.md

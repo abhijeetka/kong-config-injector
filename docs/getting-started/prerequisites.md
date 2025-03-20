@@ -1,13 +1,10 @@
-## Prerequisites (`docs/getting-started/prerequisites.md`)
-
-```markdown
-# Prerequisites
+## Prerequisites
 
 Before installing Kong Injector, ensure that you have the following prerequisites:
 
 ## Kong API Gateway
 
-You must have a running Kong API Gateway instance with the Admin API accessible from the Kubernetes cluster where you'll deploy Kong Injector.
+You must have a running Kong API Gateway instance with the Admin API accessible from the Kubernetes cluster where you'll deploy Kong Config Injector.
 
 - Kong version: 2.x or higher recommended
 - Admin API must be accessible (by default on port 8001)

@@ -1,6 +1,6 @@
-## Helm Chart Reference (`docs/reference/helm-chart.md`)
+## Helm Chart Reference
 
-```markdown
+
 # Helm Chart Reference
 
 The Kong Injector Helm chart provides a Kubernetes-native way to deploy and manage the Kong Injector application. This page describes all the configuration options available in the chart.
@@ -63,3 +63,4 @@ resources:
   requests:
     cpu: 100m
     memory: 128Mi
+```
