@@ -16,7 +16,7 @@ Ensure that the kong-config ConfigMap exists before deployment:
 
 If it does not exist, create it:
 
-``` kubectl create configmap kong-config --from-file=kong.yaml -n <namespace> ```
+``` kubectl create configmap kong-config  --from-file=kong.yaml -n <namespace> ```
 
 #### How It Works
 
