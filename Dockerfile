@@ -1,4 +1,4 @@
-FROM python:3.11-slim
+FROM python:3.12-slim
 
 ENV KONG_ADMIN_PORT=8001
 ENV KONG_ADMIN_URL=kong-cp-kong-admin
