@@ -53,4 +53,4 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4.0.5
         with:
-         name: mkdocs
+         artifact_name: mkdocs
