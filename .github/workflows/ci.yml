@@ -29,10 +29,9 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v3
         
-      - name: Upload Artifact
-        uses: actions/upload-artifact@v4
+      - name: Upload Pages Artifact
+        uses: actions/upload-pages-artifact@v4
         with:
-          name: mkdocs-site
           path: site/
 
   deploy:
