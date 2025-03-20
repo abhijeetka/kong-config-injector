@@ -2,6 +2,7 @@ name: deploy of gh-pages
 
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - gh-pages 
