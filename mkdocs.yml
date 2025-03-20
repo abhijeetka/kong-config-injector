@@ -1,6 +1,6 @@
 site_name: Kong Config Injector
 site_description: Kubernetes-based Kong API Gateway Configuration Injector
-repo_url: https://github.com/yourusername/kong-injector
+repo_url: https://github.com/abhijeetka/kong-injector
 theme:
   name: material
   palette:
